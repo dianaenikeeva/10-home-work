@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>Shop</title>
+</head>
+<body>
+  <header>
+    <div class="header_wrapper">
+      <img src="../img/logo.png" alt="logo" class="logo_main">
+      <div class="nav">
+        <a href="../html/main_page.html" class="page">Home</a>
+        <a href="#" class="page" id="categories">Categories</a>
+        <!--after pushing on it--->
+        <div class="categories" id="categoriesOpen">
+          <div class="ctg">
+          <div id="ctg_list"></div>
+          <img src="../img/Close.png" alt="close" class="categoriesClose" id="categoriesClose">
+          </div>
+          
+        </div>
+        <!---block categories--->
+        <a href="#" class="page">All products</a>
+      </div>
+      <div class="header_btns">
+        <a href=""><button class="header_btn">To The Shop</button></a>
+        <button class="header_btn">Login</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="add_np">
+      <h3>Add new product</h3>
+      <form action="" id="products_form">
+        <input  class="product_inpt" type="text" id="productName" placeholder="Name" required>
+        <input  class="product_inpt" type="text" id="productDesc" placeholder="Description" required>
+        <input  class="product_inpt" type="text" id="productImg" placeholder="Img link" required>
+        <input  class="product_inpt" type="text" id="productCtg" placeholder="Category" required>
+        <input  class="product_inpt" type="text" id="productPrice" placeholder="Price" required>
+        <button  class="product_btn" type="submit">Add</button>
+      </form>
+    </div>
+    <div class="products_wrapper">
+      <h1>Products</h1>
+      <div id="product-list"></div>
+      
+    </div>
+    <div class="btn_more">
+      <button id="more_products">Load more</button>
+    </div>
+    
+
+    
+  </main>
+  <script src="../js/main.js"></script>
+</body>
+</html>
+
+
+
