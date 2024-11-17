@@ -48,7 +48,6 @@ function editProduct(index) {
   const newCategory = prompt('Введите новую категорию:', product.category);
   const newImage = prompt('Введите новый URL изображения:', product.image);
 
-  
   if (newTitle !== null) product.title = newTitle;
   if (newPrice !== null) product.price = parseFloat(newPrice);
   if (newDescription !== null) product.description = newDescription;
@@ -57,7 +56,30 @@ function editProduct(index) {
 
   
   allProducts[index] = product;
+  
   displayProducts(allProducts);
+
+  updateProductOnServer(product, product.id);
+}
+
+async function updateProductOnServer(product, productId) {
+  try {
+    const response = await fetch(`${API_URL}/${productId}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(product),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to update product: ${response.status} ${response.statusText}`);
+    }
+
+    showMessage(`Product "${product.title}" updated successfully!`);
+  } catch (error) {
+    showMessage(`Error updating product: ${error.message}`, true);
+  }
 }
 
 function deleteProduct(index) {

@@ -387,22 +387,17 @@ button:hover, button:active{
 .ctg-item:active, .ctg-item:hover, .ctg-item:focus{
   font-weight: 700;
 }
-
-.btn_more{
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-}
+/* ctg end*/
 
 
-
+/*message start*/
 #message-container {
   position: fixed;
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
-  width: 300px; /* или любое другое значение, которое вам нужно */
+  width: 300px; 
 }
 
 .message {
@@ -423,5 +418,4 @@ button:hover, button:active{
   color: #721c24;
   border: 1px solid #f5c6cb;
 }
-
-/* ctg end*/
+/*message end*/
